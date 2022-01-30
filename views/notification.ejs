@@ -1,0 +1,25 @@
+<h1>Notification </h1>
+<script>
+
+</script>
+<div id="post-list-container">
+   <ul >
+       <% for(post of posts) {%>
+        <div class="d-flex  bg-success text-white p-2 py-3 m-2 mx-4 justify-content-between ">
+        <div class="text-align-center">
+            
+            <li>
+                <%= post.content%>
+            </li>
+        </div>
+        <div class="bg-dark text-white p-2">
+           <% if(locals.user && locals.user.id == post.user) {%>
+            <small class="font-weight-bold p-4 mx-3" ><a href="/posts/destroy/<%= post.id %>">X </a>Delete</small>
+            <%}%>
+            <!-- <small class="font-weight-bold p-4 mx-3">Reply</small> -->
+        </div>
+        </div>
+        <%}%>
+   </ul>
+
+</div>

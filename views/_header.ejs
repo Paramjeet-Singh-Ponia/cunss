@@ -1,0 +1,83 @@
+<style>
+.fa-facebook,.fa-twitter,.fa-instagram{
+  color: aliceblue;
+}
+
+</style>
+<header>
+  <nav class="navbar-expand-md d-flex justify-content-end bg-dark" id="social">
+    <div class="justify-content-center m-1">
+      <a href="https://www.facebook.com/cuhpnssnic/"><i class="fab fa-facebook fa-2x mr-4"></i></a>
+      <a href="https://twitter.com/ChitkaraU"><i class="fab fa-twitter fa-2x mr-4"></i></a>
+      <a href="https://www.instagram.com/cunssofficial/?hl=en"><i class="fab fa-instagram fa-2x mr-4"></i>
+      </a>  
+    </div>
+  </nav>
+  <div class="p-2" id="logo">
+<div class="row d-flex justify-content-between ">
+  <div class="col-3  ml-2 ">
+    <img  src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" height=100vh; width=300px; alt="logo">
+  </div>
+  <div class="col-3 justify-content-end">
+    <img src="https://pbs.twimg.com/profile_images/909687093122568192/g_WfkEqs_400x400.jpg" height=100px width=100px; alt="cu-logo">
+  </div>
+</div>
+  </div>
+
+  </div>
+    <!-- <nav class = "navbar-expand-md d-flex justify-content-between" >
+        <div >
+          <img  src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png"  alt="logo">
+        </div>
+        <div >
+          
+          <img src="https://pbs.twimg.com/profile_images/909687093122568192/g_WfkEqs_400x400.jpg" style="height: 140px; width: 250px;" alt="cu-logo">
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand border border-light rounded-circle  p-2" style="background: rgb(63, 93, 192);" href="/"> <small class="border font-weight-bold border-light rounded-circle p-2 " style="background: rgb(60, 60, 92);"> NSS</small>
+        <!-- <img src="../assets/images/logo.pn" alt="logo" width="80px" height="80px"/> -->
+          </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a  class="nav-link" href="/">Home</a >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a >
+          </li>
+          <% if(locals.user) {%>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/profile/<%=locals.user.id%>"><%= locals.user.name %> </a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/users/sign-out">Sign Out</a>
+              </li>
+            <% }else {%>
+              <li class="nav-item">
+            <a  class="nav-link" href="/users/sign-in">Sign In</a > 
+          </li>
+          <%}%>
+          <li class="nav-item">
+            <a  class="nav-link" href="/users/sign-up">Sign Up</a >
+          </li>
+          <!-- <li class="nav-item">
+            <a  class="nav-link" href="/admin">admin</a>
+          </li> -->
+          <li class="nav-item">
+            <a  class="nav-link" href="/notification">notification</a >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </section>
+
+</header>

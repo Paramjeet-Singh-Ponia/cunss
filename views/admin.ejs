@@ -1,0 +1,17 @@
+<% if(locals.user ) {%>
+<section id="feed-posts">
+    <h4>Posts</h4>
+    <form action="/posts/create" id="new-post-form" method="POST">
+      <textarea name="content"  cols="30" rows="3" placeholder="Type Here....."></textarea>
+      <input type="submit" value="Post">
+    </form>
+    </section>
+<%}else {%>
+<h1>Sign in As Admin</h1>
+<br><br>
+<form action="/users/create-session" method="POST">
+    <input type="email" name="email" placeholder="Admin Email" required>
+    <input type="password" name="password" placeholder="Passowrd" required>
+    <input type="submit" value="Sign In">
+</form>
+<%}%>
