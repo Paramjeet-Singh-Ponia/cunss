@@ -1,6 +1,9 @@
 {
   "name": "nss",
   "version": "1.0.0",
+  "engines":{
+    "node":"14.17.1"
+  },
   "description": "nss project",
   "main": "index.js",
   "scripts": {
